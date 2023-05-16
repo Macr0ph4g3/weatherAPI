@@ -47,6 +47,12 @@ table {
 	border-spacing: 0;
 }
 
+@font-face {
+    font-family: 'inter';
+    src:url(/src/font/Inter-VariableFont_slnt\,wght.ttf);
+    
+}
+
 /* */
 
 html {
@@ -90,34 +96,66 @@ margin-top: 50px;
 .tempControl {
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
-
+.tempControl button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.divider {
+    
+    height: 0px;
+    border: 0.7px outset #849896;
+    
+    }
 .search {
     border: 0.7px solid #849896;
     border-radius: 4px;
+    position: relative;
+
 }
 .search input {
-    background: transparent;
     border: none;
     height: 41px;
-    width: 267px;
+    width: 267px;   
+    background: transparent;
     
 }
-.search button {
+.search input:focus-visible{
+
+
+}
+.magGlass {
 width: 21.35px;
 height: 20.65px;
 margin-right:10px;
+background: transparent;
+color: #849896;
+border: none;
+height: 18px;
+width: 18px;
+margin-right: 20px
+}
 
-}
-.tempControl {
-    margin-left: 10px;
-}
+
+
+
 .forecastToday{
     display: flex;
     flex-direction: column;
 align-items: center;
 text-align: center;
 width: 75%;
+margin-top: 25px;
 
 }
 .header{
