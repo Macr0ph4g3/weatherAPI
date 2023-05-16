@@ -1,5 +1,5 @@
 async function fetchWeather(city) {
-    const weather = await fetch('http://api.weatherapi.com/v1/current.json?key='PLACEKEYHERE'&q='+city+'&aqi=yes', {mode: 'cors'})
+    const weather = await fetch('http://api.weatherapi.com/v1/current.json?key=8d6d643345614f2693a194606230205&q='+city+'&aqi=yes', {mode: 'cors'})
     .then( response=>{
         console.log(response.clone().json())
         return response.json();
