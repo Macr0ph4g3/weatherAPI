@@ -1,17 +1,16 @@
+import dom from "./dom.js"
+
+
 async function fetchWeather(city) {
+    // eslint-disable-next-line no-unused-vars
     const weather = await fetch('http://api.weatherapi.com/v1/current.json?key=8d6d643345614f2693a194606230205&q='+city+'&aqi=yes', {mode: 'cors'})
     .then( response=>{
         console.log(response.clone().json())
         return response.json();
     })
     .then( data => {
-        console.log(data.location.country)
-        console.log(data.location.name)
-        console.log(data.current.condition.text)
-        console.log(data.current.feelslike_f)
-        console.log(data.current.temp_f)
-        console.log(data.current.last_updated)
-
+        currentWeather = data
+        console.log(currentWeather)
 
     })
     .catch( (e) => {
@@ -19,4 +18,8 @@ async function fetchWeather(city) {
     })
     console.log(city);
 }
+
+let currentWeather = []
+
+
 export default fetchWeather

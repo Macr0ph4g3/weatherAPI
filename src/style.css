@@ -97,11 +97,12 @@ margin-top: 50px;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
+
 }
 .tempControl button {
     background: transparent;
     border: none;
-    color: white;
+    color: rgba(67, 84, 82, 1);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -121,6 +122,8 @@ margin-top: 50px;
     border: 0.7px solid #849896;
     border-radius: 4px;
     position: relative;
+    display: flex;
+    align-items: center;
 
 }
 .search input {
@@ -129,10 +132,6 @@ margin-top: 50px;
     width: 267px;   
     background: transparent;
     
-}
-.search input:focus-visible{
-
-
 }
 .magGlass {
 width: 21.35px;
