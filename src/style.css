@@ -129,10 +129,16 @@ margin-top: 50px;
 .search input {
     border: none;
     height: 41px;
-    width: 267px;   
+    width: 237px;   
     background: transparent;
     
 }
+
+.search input, textarea{
+    padding-left: 20px;
+    color: white;
+}
+
 .magGlass {
 width: 21.35px;
 height: 20.65px;

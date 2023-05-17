@@ -13,10 +13,10 @@
 
     <div id="leftPanel">
         <div class="topPanel">
-            <div class="search">
+            <form onsubmit="return false" class="search">
                 <input class="searchField" type="text"> </input>
-                <button class="magGlass"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
-            </div>
+                <button type="submit" class="magGlass"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+            </form>
             <div class="tempControl">
                 <button class="F">°F</button>
                 <div class="divider"></div>
@@ -25,6 +25,7 @@
     </div>
         <div class="forecastToday">
             <div class="header">Current</div>
+            <div class="subHeader">Location</div>
             <div class="currentWeather"></div>
             <div class="currentTemp">77°</div>
             <div class="windDirection">Northeast mph</div>

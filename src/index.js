@@ -1,8 +1,10 @@
 import './style.css';
-import weatherFetch from './weatherFetch.js';
+import {fetchWeather, currentWeather }  from './weatherFetch.js';
 import dom from './dom.js'
-import search from './search.js'
+import tempControl from './tempControl.js'
+import search from './search'
 
-search.updateTemp('F')
-search.tempControl()
-weatherFetch('Los Angeles')
+tempControl.updateTemp('F')
+tempControl.tempControl()
+console.log(currentWeather)
+fetchWeather('Los Angeles')

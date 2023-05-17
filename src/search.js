@@ -1,37 +1,15 @@
-const search = document.querySelector('.search')
+import { fetchWeather } from './weatherFetch'
+
+const search = document.querySelector('.searchField')
 const magGlass= document.querySelector('.magGlass')
-const tempControlF = document.querySelector('.F')
-const tempControlC = document.querySelector('.C')
 
+magGlass.addEventListener("click", update => {submit(search.value)})
+search.addEventListener("submit", update => {submit(search.value)} )
 
+function submit(string) {
 
-function tempControl() {
-
-    tempControlF.addEventListener("click", update => {updateTemp('F')})
-    tempControlC.addEventListener("click", update => {updateTemp('C')})
-
-}
-let currentTemp = 'F'
-
-function updateTemp(type) {
-
-
-if (type == 'F') {
-    tempControlC.style.color = "rgba(67, 84, 82, 1)"
-    tempControlF.style.color = "white"
-    currentTemp = "F"
-console.log('test')
-    return currentTemp
+    fetchWeather(string)
+    
 }
 
-if (type == "C") {
-    tempControlF.style.color = "rgba(67, 84, 82, 1)"
-    tempControlC.style.color = "white"
-    currentTemp = "C"
-console.log('work')
-    return currentTemp
-}
-
-
-}
-export default { tempControl,updateTemp }
+export default { submit }

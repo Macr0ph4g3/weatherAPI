@@ -1,2 +1,2 @@
-import fetchWeather from "./weatherFetch"
+
 

@@ -11,15 +11,16 @@ async function fetchWeather(city) {
     .then( data => {
         currentWeather = data
         console.log(currentWeather)
+        return currentWeather
 
     })
     .catch( (e) => {
         console.log(e)
     })
-    console.log(city);
+
 }
 
 let currentWeather = []
 
-
-export default fetchWeather
+// export default fetchWeather
+export { fetchWeather, currentWeather } 
