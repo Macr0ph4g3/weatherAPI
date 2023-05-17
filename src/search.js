@@ -20,7 +20,7 @@ if (type == 'F') {
     tempControlC.style.color = "rgba(67, 84, 82, 1)"
     tempControlF.style.color = "white"
     currentTemp = "F"
-
+console.log('test')
     return currentTemp
 }
 
