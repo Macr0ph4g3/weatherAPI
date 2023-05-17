@@ -1,4 +1,5 @@
 import { fetchWeather } from './weatherFetch'
+import { currentTemp } from './tempControl.js'
 
 const search = document.querySelector('.searchField')
 const magGlass= document.querySelector('.magGlass')
@@ -6,10 +7,16 @@ const magGlass= document.querySelector('.magGlass')
 magGlass.addEventListener("click", update => {submit(search.value)})
 search.addEventListener("submit", update => {submit(search.value)} )
 
-function submit(string) {
 
-    fetchWeather(string)
+let lastSearch = 'Los Angeles'
+
+function submit(string) {
+    lastSearch = string
+    console.log(`This is the submit function. temp = ${currentTemp}`)
+
+    fetchWeather(string, currentTemp)
     
+
 }
 
-export default { submit }
+export { submit, lastSearch }
