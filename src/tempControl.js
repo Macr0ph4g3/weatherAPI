@@ -1,8 +1,8 @@
+import { todaysForecast } from './todaysForecastDom.js'
+
 
 const tempControlF = document.querySelector('.F')
 const tempControlC = document.querySelector('.C')
-
-
 
 function tempControl() {
 
@@ -10,17 +10,18 @@ function tempControl() {
     tempControlC.addEventListener("click", update => {updateTemp('C')})
 
 }
-let currentTemp = 'F'
+    let currentTemp = 'F'
+
 
 function updateTemp(type) {
+
 
 
 if (type == 'F') {
     tempControlC.style.color = "rgba(67, 84, 82, 1)"
     tempControlF.style.color = "white"
     currentTemp = "F"
-    return currentTemp
-}
+    return currentTemp}
 
 if (type == "C") {
     tempControlF.style.color = "rgba(67, 84, 82, 1)"
@@ -29,6 +30,7 @@ if (type == "C") {
     return currentTemp
 }
 
-
 }
-export default { tempControl,updateTemp }
+
+
+export default { tempControl,updateTemp, currentTemp }
