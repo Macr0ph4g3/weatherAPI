@@ -7,7 +7,7 @@ console.log(daily[0].children)
 
 function weeklyForecast(object, temperature) {
 
-let forecast = object.forecast.forecastday
+const forecast = object.forecast.forecastday
 
 function getDayName(dateStr, locale){
     const date = new Date(dateStr);

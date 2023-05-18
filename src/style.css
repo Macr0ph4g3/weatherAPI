@@ -209,6 +209,7 @@ margin: 15px;
 
 .daily {
     display: flex;
+    align-items: center;
     height: 56px;
 
 }
@@ -220,8 +221,10 @@ justify-content: center;
 }
 .dailyPhoto {
     margin-right: 15px;
+    width: 50px
 }
 .dailyWeather {
     margin-right: 25px;
+    width: 120px
 }
 
