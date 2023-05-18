@@ -12,7 +12,6 @@ let lastSearch = 'Los Angeles'
 
 function submit(string) {
     lastSearch = string
-    console.log(`This is the submit function. temp = ${currentTemp}`)
 
     fetchWeather(string, currentTemp)
     

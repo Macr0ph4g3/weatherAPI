@@ -28,7 +28,6 @@ if (type == "C") {
     tempControlF.style.color = "rgba(67, 84, 82, 1)"
     tempControlC.style.color = "white"
     currentTemp = "C"
-    console.log('temp is c')
     
     return submit(lastSearch, currentTemp)
 }
@@ -36,4 +35,4 @@ if (type == "C") {
 }
 
 
-export  { tempControl,updateTemp, currentTemp }
+export { tempControl, updateTemp, currentTemp }

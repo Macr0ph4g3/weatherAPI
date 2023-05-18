@@ -8,9 +8,6 @@ const forecastHumidity = document.querySelector('.humidity')
 
 function todaysForecast(object, temperature) {
 
-    
-    console.log(object)
-
     const currentWeather = object.current.condition.text
     const precipitation = object.current.precip_in
     const humidity = object.current.humidity
@@ -24,14 +21,12 @@ function todaysForecast(object, temperature) {
             tempNow = Math.round(object.current.temp_f)
             forecastTemp.innerHTML = `${tempNow}°`
             forecastWind.innerHTML = `${windDir} ${windSpeed} mph`
-            console.log('F')
         }
         if (temperature == 'C') {
             windSpeed = object.current.wind_kph
             tempNow = Math.round(object.current.temp_c)
             forecastTemp.innerHTML =  `${tempNow}°`
             forecastWind.innerHTML = `${windDir} ${windSpeed} kph`
-            console.log('C')
         }
 
     forecastLocation.innerHTML = location
